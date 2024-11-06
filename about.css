@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* Header with Logo Background and Dark Overlay */
+header {
+    position: relative;
+    background: url('gteclogo.png') center/cover no-repeat; /* Use the logo as the background */
+    background-size: 550px; /* Adjust the size of the logo */
+    padding: 20px 0;
+    text-align: center;
+    height: 150px;
+    color: #ffffff;
+    overflow: hidden; /* Ensures the overlay covers the entire header */
+}
+
+/* Dark overlay to reduce brightness */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust transparency for dimming effect */
+    z-index: 1;
+}
+
+/* Header content styling */
+header h1,
+header nav ul {
+    position: relative;
+    z-index: 2; /* Ensures text appears above the overlay */
+}
+
+/* Navigation Links */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Adjust this value to bring it down further */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: underline; /* Underline added here */
+    font-weight: bold;
+    font-size: 1.5rem; /* Increased font size for better visibility */
+    padding: 10px 20px; /* Added padding for a larger clickable area */
+    transition: background 0.3s ease; /* Smooth background transition */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
+    color: #000; /* Change text color to black on hover for contrast */
+}
+
+/* Hero Section */
+.hero {
+    background: #333333;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about-us h2 {
+    font-size: 2.5rem; /* Matching the size from the hero section */
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Staff Section */
+.staff {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.staff h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.staff-member {
+    margin-bottom: 30px;
+}
+
+.staff-member h3 {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.staff-member p {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+/* Staff Section */
+.staff {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.staff h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+/* Staff member boxes */
+.staff-member {
+    display: inline-block;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    width: 220px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovered */
+}
+
+/* Staff member name */
+.staff-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/* Staff member position */
+.staff-member p {
+    font-size: 1.1rem;
+    color: #777777;
+}
